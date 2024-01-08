@@ -7,7 +7,7 @@ import { DataTable } from "@/components/ui/data-table";
 import { Heading } from "@/components/ui/heading";
 
 import { columns, CategoryColumn } from "./columns";
-import { PlusCircledIcon } from "@radix-ui/react-icons";
+import { PlusIcon } from "lucide-react";
 
 interface CategoryClientProps {
   data: CategoryColumn[];
@@ -26,7 +26,7 @@ export const CategoryClient: React.FC<CategoryClientProps> = ({ data }) => {
           <Button
             onClick={() => router.push(`/${params.storeId}/categories/new`)}
           >
-            <PlusCircledIcon className="mr-2 h-4 w-4" />
+            <PlusIcon className="mr-2 h-4 w-4" />
             Add new
           </Button>
         }

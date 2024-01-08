@@ -7,7 +7,7 @@ import { DataTable } from "@/components/ui/data-table";
 import { Heading } from "@/components/ui/heading";
 
 import { columns, ColorColumn } from "./columns";
-import { PlusCircledIcon } from "@radix-ui/react-icons";
+import { PlusIcon } from "lucide-react";
 
 interface ColorClientProps {
   data: ColorColumn[];
@@ -24,7 +24,7 @@ export const ColorClient: React.FC<ColorClientProps> = ({ data }) => {
         description="Manage colors for your store"
         ActionButton={
           <Button onClick={() => router.push(`/${params.storeId}/colors/new`)}>
-            <PlusCircledIcon className="mr-2 h-4 w-4" />
+            <PlusIcon className="mr-2 h-4 w-4" />
             Add new
           </Button>
         }

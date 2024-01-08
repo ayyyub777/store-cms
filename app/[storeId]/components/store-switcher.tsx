@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Check, ChevronsUpDown, PlusCircle } from "lucide-react";
+import { Check, ChevronsUpDown, PlusIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -133,7 +133,7 @@ const StoreSwitcher = ({ className, items = [] }: StoreSwitcherProps) => {
                   storeModal.onOpen();
                 }}
               >
-                <PlusCircle className="mr-2 h-4 w-4" />
+                <PlusIcon className="mr-2 h-4 w-4" />
                 Create Store
               </CommandItem>
             </CommandGroup>
