@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+app/[storeId]/(routes)/tasks
+app/[storeId]/(routes)/orders
+
 # dependencies
 /node_modules
 /.pnp

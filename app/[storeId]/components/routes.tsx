@@ -33,6 +33,12 @@ export const Routes = () => {
       icon: <LayoutGrid className="h-4 w-4 mr-2" />,
     },
     {
+      href: `/${params.storeId}/products`,
+      label: "Products",
+      active: pathname.includes(`/${params.storeId}/products`),
+      icon: <ScanLine className="h-4 w-4 mr-2" />,
+    },
+    {
       href: `/${params.storeId}/billboards`,
       label: "Billboards",
       active: pathname.includes(`/${params.storeId}/billboards`),
@@ -55,18 +61,6 @@ export const Routes = () => {
       label: "Colors",
       active: pathname.includes(`/${params.storeId}/colors`),
       icon: <Palette className="h-4 w-4 mr-2" />,
-    },
-    {
-      href: `/${params.storeId}/products`,
-      label: "Products",
-      active: pathname.includes(`/${params.storeId}/products`),
-      icon: <ScanLine className="h-4 w-4 mr-2" />,
-    },
-    {
-      href: `/${params.storeId}/orders`,
-      label: "Orders",
-      active: pathname.includes(`/${params.storeId}/orders`),
-      icon: <Package2 className="h-4 w-4 mr-2" />,
     },
     {
       href: `/${params.storeId}/settings`,
