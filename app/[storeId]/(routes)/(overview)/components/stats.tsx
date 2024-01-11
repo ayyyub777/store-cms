@@ -1,6 +1,23 @@
+import {
+  getBillboardsCount,
+  getCategoriesCount,
+  getFeaturedProductsCount,
+  getProductsCount,
+} from "@/actions/getStats";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const Stats = () => {
+interface StatsProps {
+  params: {
+    storeId: string;
+  };
+}
+
+const Stats: React.FC<StatsProps> = async ({ params }) => {
+  const productsCount = await getProductsCount(params.storeId);
+  const featuredProductsCount = await getFeaturedProductsCount(params.storeId);
+  const billboardsCount = await getBillboardsCount(params.storeId);
+  const categoriesCount = await getCategoriesCount(params.storeId);
+
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       <Card>
@@ -8,7 +25,7 @@ const Stats = () => {
           <CardTitle className="text-sm font-medium">Active Products</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">3</div>
+          <div className="text-2xl font-bold">{productsCount}</div>
         </CardContent>
       </Card>
       <Card>
@@ -18,7 +35,7 @@ const Stats = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">2</div>
+          <div className="text-2xl font-bold">{featuredProductsCount}</div>
         </CardContent>
       </Card>
       <Card>
@@ -26,7 +43,7 @@ const Stats = () => {
           <CardTitle className="text-sm font-medium">Billboards</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">4</div>
+          <div className="text-2xl font-bold">{billboardsCount}</div>
         </CardContent>
       </Card>
       <Card>
@@ -34,7 +51,7 @@ const Stats = () => {
           <CardTitle className="text-sm font-medium">Categories</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">6</div>
+          <div className="text-2xl font-bold">{categoriesCount}</div>
         </CardContent>
       </Card>
     </div>

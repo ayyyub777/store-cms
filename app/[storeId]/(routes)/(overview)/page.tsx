@@ -1,10 +1,16 @@
 import { ApiList } from "./components/api-list";
 import Stats from "./components/stats";
 
-const DashboardPage = async () => {
+interface DashboardPageProps {
+  params: {
+    storeId: string;
+  };
+}
+
+const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
   return (
     <>
-      <Stats />
+      <Stats params={params} />
       <div className="grid gap-4 mt-4">
         <ApiList entityName="products" entityIdName="productId" />
         <ApiList entityName="billboards" entityIdName="billboardId" />
