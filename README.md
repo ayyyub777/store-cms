@@ -321,7 +321,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## Meta
 
 Ayoub Bigharassine – [LinkedIn](https://www.linkedin.com/in/ayoub-bigharassine/) – ayoub.bigharassine@gmail.com
-
-Distributed under the MIT license. See `LICENSE` for more information.
-
-[https://github.com/ayyyub777/store-cms](https://github.com/ayyyub777/store-cms/)
